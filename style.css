@@ -1,14 +1,14 @@
 :root {
-  --bg: #f6f8fb;
-  --card: #fff;
-  --text: #172033;
-  --muted: #667085;
-  --accent: #5b4bdb;
-  --accent2: #7c6cf0;
-  --line: #e6e8ef;
-  --good: #16794a;
-  --radius: 18px;
-  --shadow: 0 5px 20px rgba(20, 25, 45, 0.05);
+  --bg: #fdfcff;              /* soft white lavender */
+  --card: #ffffff;            /* clean white */
+  --text: #2a2a3b;            /* deep soft navy */
+  --muted: #7b7b95;           /* gentle muted purple-grey */
+  --accent: #e26ad6;          /* bright pink-purple (motivational) */
+  --accent2: #d255c4;         /* hover pink-purple */
+  --line: #f0e9f7;            /* soft pastel border */
+  --good: #4caf93;            /* mint green success */
+  --radius: 20px;
+  --shadow: 0 8px 24px rgba(120, 80, 180, 0.08);
 }
 
 * {
@@ -40,7 +40,7 @@ header {
 }
 
 .brand {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
 }
 
@@ -50,9 +50,29 @@ header {
   margin-top: 4px;
 }
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 0 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+/* HERO IMAGE */
 .hero-img {
   width: 100%;
-  max-width: 220px;   /* smaller, cuter */
+  max-width: 220px;
   display: block;
   margin: 0 auto 24px;
   border-radius: 20px;
@@ -64,38 +84,25 @@ main {
   padding: 28px 16px 60px;
 }
 
-.hero {
-  padding: 28px 0 10px;
-}
-
-.hero h1 {
-  font-size: 40px;
-  margin: 0 0 10px;
-}
-
-.hero p {
-  color: var(--muted);
-  font-size: 17px;
-}
-
 /* Card */
 .card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 24px;
-  margin: 18px 0;
+  padding: 26px;
+  margin: 22px 0;
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(20, 25, 45, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(120, 80, 180, 0.12);
 }
 
 h2 {
   margin-top: 0;
+  margin-bottom: 12px;
 }
 
 /* Form elements */
@@ -114,30 +121,31 @@ input,
 textarea {
   width: 100%;
   padding: 13px;
-  border: 1px solid #d8dbe5;
-  border-radius: 11px;
+  border: 1px solid #e3d8ef;
+  border-radius: 14px;
   font-size: 15px;
   background: white;
-  transition: border 0.2s ease;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 select:focus,
 input:focus,
 textarea:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(226, 106, 214, 0.2);
   outline: none;
 }
 
 /* Buttons */
 button {
   border: 0;
-  border-radius: 11px;
-  padding: 13px 18px;
+  border-radius: 14px;
+  padding: 14px 20px;
   background: var(--accent);
   color: #fff;
-  font-weight: 750;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background 0.25s ease, transform 0.1s ease;
 }
 
 button:hover {
@@ -149,23 +157,23 @@ button:active {
 }
 
 button.secondary {
-  background: #eeeef8;
-  color: #332b82;
+  background: #f7e9fb;
+  color: #a03ea0;
 }
 
 button.secondary:hover {
-  background: #e0defc;
+  background: #f3d9f7;
 }
 
 /* Pills */
 .pill {
   display: inline-block;
-  background: #eeeef8;
-  color: #3b328d;
-  padding: 6px 9px;
+  background: #f7e9fb;
+  color: #a03ea0;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 12px;
-  margin: 3px;
+  font-size: 13px;
+  margin: 4px;
 }
 
 /* Result box */
@@ -178,7 +186,7 @@ button.secondary:hover {
 /* Progress bar */
 .progress {
   height: 9px;
-  background: #ececf4;
+  background: #f3edf9;
   border-radius: 99px;
   overflow: hidden;
   margin-top: 10px;
@@ -204,6 +212,7 @@ button.secondary:hover {
 .price {
   font-size: 28px;
   font-weight: 850;
+  color: var(--accent);
 }
 
 .feature {
@@ -232,10 +241,10 @@ footer {
 /* Mobile */
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .card {
-    padding: 18px;
+    padding: 20px;
   }
 }
 
