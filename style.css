@@ -247,3 +247,55 @@ footer {
     padding: 20px;
   }
 }
+/* Deep Slate/Obsidian Background */
+body {
+  background-color: #0B0F17;
+  color: #E2E8F0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hi-Tech Header */
+header, .header {
+  background: linear-gradient(180deg, #111827 0%, #0B0F17 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Glassmorphism Luxury Cards */
+.card, .container, section {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5),
+              0 0 15px rgba(217, 70, 239, 0.05); /* Subtle pink glow */
+}
+
+/* Hi-Tech Gradient Heading */
+h1 {
+  background: linear-gradient(135deg, #F472B6 0%, #A855F7 50%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Sleek Luxury Buttons */
+button, .btn {
+  background: linear-gradient(135deg, #D946EF 0%, #8B5CF6 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px rgba(217, 70, 239, 0.35);
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 70, 239, 0.5);
+}
