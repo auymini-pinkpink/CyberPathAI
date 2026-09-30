@@ -153,3 +153,4 @@ function scoreAnswer() {
     </div>
   `;
 }
+
