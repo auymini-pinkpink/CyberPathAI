@@ -51,10 +51,12 @@ header {
 }
 
 .hero-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  margin-bottom: 16px;
+  width: 100%;
+  max-width: 220px;   /* smaller, cuter */
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(120, 80, 180, 0.12);
 }
 
 /* Main */
