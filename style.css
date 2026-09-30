@@ -1,0 +1,239 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #fff;
+  --text: #172033;
+  --muted: #667085;
+  --accent: #5b4bdb;
+  --accent2: #7c6cf0;
+  --line: #e6e8ef;
+  --good: #16794a;
+  --radius: 18px;
+  --shadow: 0 5px 20px rgba(20, 25, 45, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background: #17152b;
+  color: white;
+  padding: 22px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.wrap {
+  max-width: 920px;
+  margin: auto;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.tag {
+  color: #c9c5ff;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+/* Main */
+main {
+  padding: 28px 16px 60px;
+}
+
+.hero {
+  padding: 28px 0 10px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 18px 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(20, 25, 45, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Form elements */
+.q {
+  margin: 18px 0;
+}
+
+.q label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8dbe5;
+  border-radius: 11px;
+  font-size: 15px;
+  background: white;
+  transition: border 0.2s ease;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  border: 0;
+  border-radius: 11px;
+  padding: 13px 18px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--accent2);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.secondary {
+  background: #eeeef8;
+  color: #332b82;
+}
+
+button.secondary:hover {
+  background: #e0defc;
+}
+
+/* Pills */
+.pill {
+  display: inline-block;
+  background: #eeeef8;
+  color: #3b328d;
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 3px;
+}
+
+/* Result box */
+.result {
+  border-left: 4px solid var(--accent);
+  padding-left: 15px;
+  margin-top: 12px;
+}
+
+/* Progress bar */
+.progress {
+  height: 9px;
+  background: #ececf4;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.bar {
+  height: 100%;
+  background: var(--accent);
+  width: 0;
+  transition: width 0.6s ease;
+}
+
+/* Misc */
+.jobbox {
+  min-height: 130px;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 850;
+}
+
+.feature {
+  padding: 8px 0;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Layout */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .card {
+    padding: 18px;
+  }
+}
+

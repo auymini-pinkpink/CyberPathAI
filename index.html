@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberPath AI</title>
+
+<!-- External CSS + JS -->
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">CyberPath AI</div>
+    <div class="tag">Your cybersecurity career, one step at a time.</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+       <img src="images/cyber-hero.png" alt="Cybersecurity illustration" class="hero-img">
+
+  <h1>Build your cybersecurity career.</h1>
+  <p>Find your pathway, identify skill gaps and practise job interviews. This is the first MVP version of your app.</p>
+</section>
+
+    <h1>Build your cybersecurity career.</h1>
+    <p>Find your pathway, identify skill gaps and practise job interviews. This is the first MVP version of your app.</p>
+  </section>
+
+  <!-- CAREER ASSESSMENT -->
+  <section class="card" id="assessment">
+    <h2>1. Career assessment</h2>
+
+    <div class="q">
+      <label>Experience</label>
+      <select id="exp">
+        <option>Complete beginner</option>
+        <option>IT experience</option>
+        <option>Cybersecurity student</option>
+        <option>IT professional</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>What interests you?</label>
+      <select id="interest">
+        <option>Cybersecurity</option>
+        <option>Networking</option>
+        <option>Penetration testing</option>
+        <option>Cloud security</option>
+        <option>SOC / Blue team</option>
+        <option>GRC</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>Study hours per week</label>
+      <select id="hours">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20+</option>
+      </select>
+    </div>
+
+    <button onclick="generatePath()">Generate my pathway</button>
+  </section>
+
+  <!-- PATHWAY RESULT -->
+  <section class="card hidden" id="path">
+    <h2>Your personalised pathway</h2>
+    <div id="pathText"></div>
+  </section>
+
+  <!-- JOB ANALYSER -->
+  <section class="card">
+    <h2>2. Job description analyser</h2>
+    <p class="small">Paste a cybersecurity job advertisement below.</p>
+
+    <textarea id="job" class="jobbox" placeholder="Example: Junior Cybersecurity Analyst..."></textarea>
+
+    <br><br>
+    <button onclick="analyseJob()">Analyse this job</button>
+
+    <div id="jobResult"></div>
+  </section>
+
+  <!-- INTERVIEW COACH -->
+  <section class="card">
+    <h2>3. Interview coach</h2>
+
+    <p><strong id="question">Tell me about yourself and why you're interested in cybersecurity.</strong></p>
+
+    <textarea id="answer" placeholder="Type your answer here..."></textarea>
+
+    <br><br>
+    <div class="row">
+      <button onclick="scoreAnswer()">Get feedback</button>
+      <button class="secondary" onclick="nextQuestion()">Next question</button>
+    </div>
+
+    <div id="feedback"></div>
+  </section>
+
+  <!-- PREMIUM -->
+  <section class="card">
+    <h2>Premium concept</h2>
+
+    <div class="price">$9.99 <span class="small">/ month</span></div>
+
+    <div class="feature">✓ Unlimited job analysis</div>
+    <div class="feature">✓ AI interview practice</div>
+    <div class="feature">✓ Personalised career pathway</div>
+    <div class="feature">✓ Resume feedback</div>
+
+    <p class="small">Payment is not connected in this prototype. This is the business model we would implement next.</p>
+
+    <button onclick="alert('Premium checkout will be connected in the next version.')">Start Premium</button>
+  </section>
+
+  <footer>CyberPath AI — MVP prototype</footer>
+
+</main>
+
+</body>
+</html>
