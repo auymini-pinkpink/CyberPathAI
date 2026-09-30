@@ -1,110 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CyberPath AI — Your Cybersecurity Career Guide</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberPath AI</title>
+
+<!-- External CSS + JS -->
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
 </head>
 <body>
 
-  <header>
-    <h1>CyberPath AI</h1>
-    <p>Your cybersecurity career, one step at a time.</p>
-  </header>
-
-  <div class="container">
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&q=80" alt="Cybersecurity illustration" class="hero-img">
-      <h2>Build your cybersecurity career.</h2>
-      <p>Find your pathway, identify skill gaps, and practise job interviews with tailored AI feedback.</p>
-    </section>
-
-    <!-- 1. Career Assessment -->
-    <section class="card">
-      <h3>1. Career Assessment</h3>
-      <div class="form-group">
-        <label for="experience">Current Experience Level</label>
-        <select id="experience">
-          <option value="Complete beginner">Complete beginner</option>
-          <option value="IT experience">IT experience</option>
-          <option value="Cybersecurity student">Cybersecurity student</option>
-          <option value="IT professional">IT professional</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="interest">Primary Interest</label>
-        <select id="interest">
-          <option value="SOC / Blue Team">SOC / Blue Team</option>
-          <option value="Penetration Testing">Penetration Testing (Red Team)</option>
-          <option value="Cloud Security">Cloud Security</option>
-          <option value="Networking">Networking</option>
-          <option value="GRC">Governance, Risk & Compliance (GRC)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="hours">Study Hours Per Week</label>
-        <select id="hours">
-          <option value="5">5 hours / week</option>
-          <option value="10">10 hours / week</option>
-          <option value="15">15 hours / week</option>
-          <option value="20+">20+ hours / week</option>
-        </select>
-      </div>
-
-      <button id="btn-pathway">Generate My Pathway</button>
-
-      <div id="pathway-output" class="output-box"></div>
-    </section>
-
-    <!-- 2. Job Description Analyser -->
-    <section class="card">
-      <h3>2. Job Description Analyser</h3>
-      <div class="form-group">
-        <label for="job-desc">Paste a cybersecurity job advertisement below</label>
-        <textarea id="job-desc" placeholder="e.g., Looking for a Junior SOC Analyst proficient in Wireshark, SIEM tools, and network defense principles..."></textarea>
-      </div>
-      <button id="btn-analyze">Analyse Job Listing</button>
-
-      <div id="job-output" class="output-box"></div>
-    </section>
-
-    <!-- 3. Interview Coach -->
-    <section class="card">
-      <h3>3. Interview Coach</h3>
-      <div class="form-group">
-        <label id="question-label">Question 1: Tell me about yourself and why you're interested in cybersecurity.</label>
-        <textarea id="interview-answer" placeholder="Type your response here..."></textarea>
-      </div>
-      <button id="btn-feedback">Get Feedback</button>
-      <button id="btn-next" class="btn-secondary">Next Question</button>
-
-      <div id="interview-output" class="output-box"></div>
-    </section>
-
-    <!-- Premium Concept -->
-    <section class="card pricing-card">
-      <h3>CyberPath AI Premium</h3>
-      <div class="price">$9.99 <span class="price-period">/ month</span></div>
-      <ul class="features-list">
-        <li>✓ Unlimited job advertisement analysis</li>
-        <li>✓ Real-time AI interview practice & scoring</li>
-        <li>✓ Personalised multi-month career roadmap</li>
-        <li>✓ Automated resume skill gap check</li>
-      </ul>
-      <button id="btn-premium">Start Premium Trial</button>
-    </section>
-
-    <footer>
-      <p>CyberPath AI — MVP Prototype</p>
-    </footer>
-
+<header>
+  <div class="wrap">
+    <div class="brand">CyberPath AI</div>
+    <div class="tag">Your cybersecurity career, one step at a time.</div>
   </div>
+</header>
 
-  <script src="script.js"></script>
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+  <div class="hero-content">
+    <img src="images/cyber-hero.png" alt="Cybersecurity illustration" class="hero-img">
+
+    <h1>Build your cybersecurity career.</h1>
+    <p>Find your pathway, identify skill gaps and practise job interviews. This is the first MVP version of your app.</p>
+  </div>
+</section>
+
+
+  <h1>Build your cybersecurity career.</h1>
+  <p>Find your pathway, identify skill gaps and practise job interviews. This is the first MVP version of your app.</p>
+</section>
+
+    <h1>Build your cybersecurity career.</h1>
+    <p>Find your pathway, identify skill gaps and practise job interviews. This is the first MVP version of your app.</p>
+  </section>
+
+  <!-- CAREER ASSESSMENT -->
+  <section class="card" id="assessment">
+    <h2>1. Career assessment</h2>
+
+    <div class="q">
+      <label>Experience</label>
+      <select id="exp">
+        <option>Complete beginner</option>
+        <option>IT experience</option>
+        <option>Cybersecurity student</option>
+        <option>IT professional</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>What interests you?</label>
+      <select id="interest">
+        <option>Cybersecurity</option>
+        <option>Networking</option>
+        <option>Penetration testing</option>
+        <option>Cloud security</option>
+        <option>SOC / Blue team</option>
+        <option>GRC</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label>Study hours per week</label>
+      <select id="hours">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20+</option>
+      </select>
+    </div>
+
+    <button onclick="generatePath()">Generate my pathway</button>
+  </section>
+
+  <!-- PATHWAY RESULT -->
+  <section class="card hidden" id="path">
+    <h2>Your personalised pathway</h2>
+    <div id="pathText"></div>
+  </section>
+
+  <!-- JOB ANALYSER -->
+  <section class="card">
+    <h2>2. Job description analyser</h2>
+    <p class="small">Paste a cybersecurity job advertisement below.</p>
+
+    <textarea id="job" class="jobbox" placeholder="Example: Junior Cybersecurity Analyst..."></textarea>
+
+    <br><br>
+    <button onclick="analyseJob()">Analyse this job</button>
+
+    <div id="jobResult"></div>
+  </section>
+
+  <!-- INTERVIEW COACH -->
+  <section class="card">
+    <h2>3. Interview coach</h2>
+
+    <p><strong id="question">Tell me about yourself and why you're interested in cybersecurity.</strong></p>
+
+    <textarea id="answer" placeholder="Type your answer here..."></textarea>
+
+    <br><br>
+    <div class="row">
+      <button onclick="scoreAnswer()">Get feedback</button>
+      <button class="secondary" onclick="nextQuestion()">Next question</button>
+    </div>
+
+    <div id="feedback"></div>
+  </section>
+
+  <!-- PREMIUM -->
+  <section class="card">
+    <h2>Premium concept</h2>
+
+    <div class="price">$9.99 <span class="small">/ month</span></div>
+
+    <div class="feature">✓ Unlimited job analysis</div>
+    <div class="feature">✓ AI interview practice</div>
+    <div class="feature">✓ Personalised career pathway</div>
+    <div class="feature">✓ Resume feedback</div>
+
+    <p class="small">Payment is not connected in this prototype. This is the business model we would implement next.</p>
+
+    <button onclick="alert('Premium checkout will be connected in the next version.')">Start Premium</button>
+  </section>
+
+  <footer>CyberPath AI — MVP prototype</footer>
+
+</main>
+
 </body>
 </html>
